@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body style="margin: 0;">
+    <div style="position: relative">
+        <div>
+            <img style="display: block; width: 100%; height: auto; " src="./public/img/background-error-template.svg"
+                alt="404 ERROR BACKGROUND TEMPLATE">
+        </div>
+
+        <div>
+            <img style="position: absolute; width: 50%; height: auto; top:25%; left:25%;"
+                src="./public/img/github-background.svg" alt="404 ERROR PAGE IMAGE">
+        </div>
+    
+    </div>
+
+    <footer style="display: flex; flex-direction:column; align-items: center; justify-content: center;">
+        <div style="display: flex; flex-direction:column;">
+            <p>Find code, projects, and people on GitHub:</p>
+            
+            <div style="display: flex; gap: 6px;">
+                <form action="https://github.com/search">
+                    <input 
+                        id="search-bar"
+                        type="text" 
+                        placeholder="Rechercher ..."
+                        style="width: 50pc;"
+                        />
+                    <button style="padding: 16px;" id="search-btn">Search</button>
+                </form>
+            </div>
+        </div>
+        <div style="display:flex; gap: 6px; padding-top: 16px;">
+            <a href="https://support.github.com/?tags=dotcom-404">Contact Support</a> <span>—</span> <a href="https://githubstatus.com/">GitHub Status</a> <span>—</span> <ahref="https://x.com/githubstatus">@githubstatus</a>
+        </div>
+    </footer>
+
+    <script>
+
+        const searchBarValue = document.getElementById("search-bar");
+        const searchBtn = document.getElementById("search-btn");
+        
+        function handleSearch() {
+            if (searchBarValue.value.trim() !== "") {
+                console.log("Recherche lancée avec :", searchBarValue)
+            }
+        }
+        
+    </script>
+</body>
+
+</html>
